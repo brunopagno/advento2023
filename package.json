@@ -1,0 +1,13 @@
+{
+  "name": "advento2023",
+  "scripts": {
+    "day": "node src/index.js",
+    "test": "jest",
+    "test:watch": "jest --watchAll"
+  },
+  "author": "Bruno Pagno",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
