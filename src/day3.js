@@ -40,7 +40,34 @@ function part1(input) {
     .reduce((acc, curr) => acc + curr, 0);
 }
 
-function part2(input) {}
+function part2(input) {
+  const lines = input.split("\n");
+
+  return lines
+    .map((line, lineNumber) =>
+      Array.from(line.matchAll(/\*/g))
+        .map((match) => {
+          const nums = [
+            Array.from(lines[lineNumber - 1].matchAll(/\d+/g)),
+            Array.from(lines[lineNumber].matchAll(/\d+/g)),
+            Array.from(lines[lineNumber + 1].matchAll(/\d+/g)),
+          ]
+            .flat()
+            .filter(
+              (num) =>
+                num["index"] <= match["index"] + 1 &&
+                num["index"] + num[0].length > match["index"] - 1
+            );
+
+          if (nums.length == 2) {
+            return nums[0] * nums[1];
+          }
+          return 0;
+        })
+        .reduce((acc, curr) => acc + curr, 0)
+    )
+    .reduce((acc, curr) => acc + curr, 0);
+}
 
 module.exports = {
   part1,

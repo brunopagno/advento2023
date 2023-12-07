@@ -19,10 +19,19 @@ describe("Day 3", () => {
   });
 
   describe("part 2", () => {
-    const testInput = ``;
+    const testInput = `467..114..
+...*......
+..35..633.
+......#...
+617*......
+.....+.58.
+..592.....
+......755.
+...$.*....
+.664.598..`;
 
     it("should validate test input", () => {
-      expect(part2(testInput)).toEqual(0);
+      expect(part2(testInput)).toEqual(467835);
     });
   });
 });
