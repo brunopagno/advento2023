@@ -42,9 +42,9 @@ humidity-to-location map:
     });
   });
 
-  // describe("part 2", () => {
-  //   it("should validate test input", () => {
-  //     expect(part2(testInput)).toEqual(46);
-  //   });
-  // });
+  describe("part 2", () => {
+    it("should validate test input", () => {
+      expect(part2(testInput)).toEqual(46);
+    });
+  });
 });
