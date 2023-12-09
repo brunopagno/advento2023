@@ -15,7 +15,7 @@ QQQJA 483`;
 
   describe("part 2", () => {
     it("should validate test input", () => {
-      expect(part2(testInput)).toEqual(0);
+      expect(part2(testInput)).toEqual(5905);
     });
   });
 });
